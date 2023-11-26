@@ -1,0 +1,7 @@
+
+9
+java:S1643$"Use a StringBuilder instead.(ﬂ§¶±8∂ù›À¿1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ÏË˙Â8æù›À¿1
+[
+java:S1858$">"next" returns a string, there's no need to call "toString()".(ﬂ§¶±8ø≤ﬁÀ¿1
