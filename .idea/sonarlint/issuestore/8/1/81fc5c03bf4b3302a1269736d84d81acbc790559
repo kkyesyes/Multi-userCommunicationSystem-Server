@@ -1,7 +1,7 @@
 
 9
-java:S1643$"Use a StringBuilder instead.(ß¤¦±8¶ÝËÀ1
+java:S1643+"Use a StringBuilder instead.(ß¤¦±8Œ‘€‹Á1
 W
-java:S1118":Add a private constructor to hide the implicit public one.(ìèúå8¾ÝËÀ1
+java:S1118":Add a private constructor to hide the implicit public one.(ìèúå8”‘€‹Á1
 [
-java:S1858$">"next" returns a string, there's no need to call "toString()".(ß¤¦±8¿²ÞËÀ1
+java:S1858+">"next" returns a string, there's no need to call "toString()".(ß¤¦±8˜‘€‹Á1

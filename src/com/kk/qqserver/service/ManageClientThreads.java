@@ -20,6 +20,13 @@ public class ManageClientThreads {
     }
 
     /**
+     * 将客户端线程从服务端集合中移除
+     */
+    public static void deleteClientThread(String userId) {
+        hm.remove(userId);
+    }
+
+    /**
      * 根据userId取得对应的线程
      */
     public static ServerConnectClientThread getClientThread(String userId) {
