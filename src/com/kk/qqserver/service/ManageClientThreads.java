@@ -1,7 +1,7 @@
 package com.kk.qqserver.service;
 
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 管理客户端线程
@@ -31,6 +31,16 @@ public class ManageClientThreads {
      */
     public static ServerConnectClientThread getClientThread(String userId) {
         return hm.get(userId);
+    }
+
+    /**
+     * 取得所有在线用户对应的线程
+     */
+    public static Set<String> getAllClientThread(String sender) {
+        Set<String> getters = hm.keySet().stream()
+                .filter(element -> !element.equals(sender))
+                .collect(Collectors.toSet());
+        return getters;
     }
 
     /**

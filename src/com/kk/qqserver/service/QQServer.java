@@ -57,9 +57,10 @@ public class QQServer {
     public QQServer() {
         try {
             ss = new ServerSocket(9999);
+            boolean exit = false;
             System.out.println("服务器在9999端口监听中...");
 
-            while (true) {
+            while (!exit) {
                 // 监听获取
                 Socket socket = ss.accept();
                 ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());

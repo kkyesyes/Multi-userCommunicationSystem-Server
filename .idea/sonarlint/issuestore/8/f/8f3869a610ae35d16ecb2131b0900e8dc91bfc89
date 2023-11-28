@@ -1,11 +1,10 @@
 
-g	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…³µŠÁ1
-m
-java:S1301$"KReplace this "switch" statement by "if" statements to increase readability.(áê€ñúÿÿÿÿ8‡³µŠÁ1
-L	java:S106"+Replace this use of System.out by a logger.(™òâ°úÿÿÿÿ8³µŠÁ1
-C	java:S131$""Add a default case to this switch.(áê€ñúÿÿÿÿ8Ÿ³µŠÁ1
-G	java:S106'"+Replace this use of System.out by a logger.(‘˜œ8 ³µŠÁ1
-L	java:S1067"+Replace this use of System.out by a logger.(Òšù£ùÿÿÿÿ8¡³µŠÁ1
-X	java:S125="<This block of commented-out lines of code should be removed.(Ì‘Ó†8¢³µŠÁ1
+g	java:S112`"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¿øŸ©Á1
+L	java:S106 "+Replace this use of System.out by a logger.(™òâ°úÿÿÿÿ8ÈøŸ©Á1
+C	java:S131&""Add a default case to this switch.(áê€ñúÿÿÿÿ8ËøŸ©Á1
+G	java:S106)"+Replace this use of System.out by a logger.(‘˜œ8ÌøŸ©Á1
+L	java:S106F"+Replace this use of System.out by a logger.(û‡»Öùÿÿÿÿ8ÎøŸ©Á1
+G	java:S106P"+Replace this use of System.out by a logger.(şµ¨Ü8ÑøŸ©Á1
+L	java:S106Y"+Replace this use of System.out by a logger.(Òšù£ùÿÿÿÿ8ÓøŸ©Á1
 R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ú½ÉŠÁ1
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ÑåªÁ1

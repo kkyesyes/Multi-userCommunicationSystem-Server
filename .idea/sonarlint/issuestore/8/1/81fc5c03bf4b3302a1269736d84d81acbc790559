@@ -1,7 +1,9 @@
 
 9
-java:S1643+"Use a StringBuilder instead.(ß¤¦±8Œ‘€‹Á1
+java:S16435"Use a StringBuilder instead.(ß¤¦±8î…ç©Á1
+|
+java:S1488("_Immediately return this expression instead of assigning it to the temporary variable "getters".(×é°ä8µ§ñ©Á1
 W
-java:S1118":Add a private constructor to hide the implicit public one.(ìèúå8”‘€‹Á1
+java:S1118":Add a private constructor to hide the implicit public one.(ìèúå8ô…ç©Á1
 [
-java:S1858+">"next" returns a string, there's no need to call "toString()".(ß¤¦±8˜‘€‹Á1
+java:S18585">"next" returns a string, there's no need to call "toString()".(ß¤¦±8û…ç©Á1
