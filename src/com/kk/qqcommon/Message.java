@@ -15,6 +15,15 @@ public class Message implements Serializable {
     private String getter;
     private String content;
     private String sendTime;
+    private String fileName;
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
 
     public String getSender() {
         return sender;

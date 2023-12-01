@@ -53,6 +53,7 @@ public class ServerConnectClientThread extends Thread {
                         break;
 
                     case MessageType.MESSAGE_COMM_MES:
+                        // 群发
                         if (ms.getGetter().equals("@all")) {
                             // 取到所有用户线程
                             Set<String> users = ManageClientThreads.getAllClientThread(ms.getSender());
@@ -66,17 +67,19 @@ public class ServerConnectClientThread extends Thread {
                             }
                             break;
                         }
+                        // 私聊转发
                         if (ManageClientThreads.getClientThread(ms.getGetter()) == null) {
                             System.out.println("客户端 " + ms.getSender() + " 对客户端 " + ms.getGetter() + " 的私聊请求失败：被请求方不在线");
                             ServerConnectClientThread senderThread = ManageClientThreads.getClientThread(ms.getSender());
                             ObjectOutputStream serverReply = new ObjectOutputStream(senderThread.socket.getOutputStream());
                             Message serverMs =  new Message();
-                            serverMs.setMesType(MessageType.MESSAGE_OTHERS);
+                            serverMs.setMesType(MessageType.MESSAGE_SYS);
                             String content = "客户端 " + ms.getGetter() + " 未在线，消息发送失败";
                             serverMs.setContent(content);
                             serverReply.writeObject(serverMs);
                             break;
                         }
+                        // log
                         System.out.println("客户端 " + ms.getSender() + " 对客户端 " + ms.getGetter() + " 说 " + ms.getContent());
                         ServerConnectClientThread getterThread = ManageClientThreads.getClientThread(ms.getGetter());
                         ObjectOutputStream talkOos =
@@ -84,6 +87,31 @@ public class ServerConnectClientThread extends Thread {
                         talkOos.writeObject(ms);
                         break;
 
+                    // 4. 发送文件
+                    case MessageType.MESSAGE_FILE_MES:
+//                        if (ManageClientThreads.getClientThread(ms.getGetter()) == null) {
+//                            System.out.println("客户端 " + ms.getSender() + " 对客户端 " + ms.getGetter() + " 的文件发送请求失败：被请求方不在线");
+//                            ServerConnectClientThread senderThread = ManageClientThreads.getClientThread(ms.getSender());
+//                            ObjectOutputStream serverReply = new ObjectOutputStream(senderThread.socket.getOutputStream());
+//                            Message serverMs = new Message();
+//                            serverMs.setMesType(MessageType.MESSAGE_SYS);
+//                            String content = "客户端 " + ms.getGetter() + " 未在线，文件发送失败";
+//                            serverMs.setContent(content);
+//                            serverReply.writeObject(serverMs);
+//                            break;
+//                        }
+//                        // log
+//                        System.out.println(ms.getSender() + " 向 " + ms.getGetter() + " 发送了一份文件");
+//                        ServerConnectClientThread fileGetterThread = ManageClientThreads.getClientThread(ms.getGetter());
+//                        ObjectOutputStream fileOos = null;
+//                        try {
+//                            fileOos =
+//                                    new ObjectOutputStream(fileGetterThread.socket.getOutputStream());
+//                            fileOos.writeObject(ms);
+//                        } catch (IOException e) {
+//                            System.out.println("文件转发异常");
+//                        }
+                        break;
                     // 9. 退出登录
                     case MessageType.MESSAGE_CLIENT_EXIT:
                         System.out.println("客户端 " + ms.getSender() + " 请求退出登录");
